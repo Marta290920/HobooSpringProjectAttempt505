@@ -1,0 +1,11 @@
+body {
+    background: url(../images/finalBackground.jpg);
+}
+
+.btn_singUp {
+    background: lightcyan;
+}
+
+.btn_reset {
+    background: lightcyan;
+}

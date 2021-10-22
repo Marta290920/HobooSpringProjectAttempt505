@@ -1,0 +1,11 @@
+body {
+    background: url(../images/finalBackground.jpg);
+}
+
+.login {
+    background: lightcyan;
+}
+
+.reset {
+    background: lightcyan;
+}

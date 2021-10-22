@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="header"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!--    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>-->
+    <script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js}"></script>
+    <link rel="stylesheet"
+          th:href="@{https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css}"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+    <link th:rel="stylesheet" type="text/css" th:href="@{../../css/header.css}"/>
+</head>
+<body>
+
+<div class="container-header">
+
+    <a th:href="@{/src/main/webapp/WEB-INF/views/index.html}"> <img th:src="@{/images/mylogo2.png}" width="85"
+                                                                    height="65" alt="Logo" class="rightpic"></a>
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+        <a th:href="@{/}" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+        </a>
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a th:href="@{/}" class="nav-link px-2 link-secondary">Home</a></li>
+            <li><a th:href="@{/hotelsList}" class="nav-link px-2 link-dark">All hotels</a>
+            </li>
+
+            <!--            <%-->
+            <!--            Long userID = (Long) session.getAttribute("id");-->
+            <!--            if (userID != null) {-->
+            <!--            %>-->
+            <li><a th:href="@{/favorite}" class="nav-link px-2 link-dark">Favorites</a></li>
+            <li><a th:href="@{/booking}" class="nav-link px-2 link-dark">My bookings</a>
+            </li>
+            <!--            <% }%>-->
+            <li><a th:href="@{addOwnObject}" class="nav-link px-2 link-dark">Add own object</a></li>
+        </ul>
+
+        <div class="col-md-3 text-end">
+            <!--            <%-->
+            <!--            Long userId = (Long) session.getAttribute("id");-->
+            <!--            if (userId == null) {-->
+            <!--            %>-->
+            <div>
+                <a th:href="@{/logout}">
+                    <button id="logout" type="button" class="btn btn-primary">Logout</button>
+                </a>
+            </div>
+            <div>
+                <a th:href="@{/login}">
+                    <button type="button" class="btn btn-outline-primary me-2">Login</button>
+                </a>
+                <a th:href="@{/registration}">
+                    <button id="singUp" type="button" class="btn btn-primary">Sing-up</button>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
